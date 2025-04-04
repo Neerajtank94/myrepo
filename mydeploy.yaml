@@ -15,7 +15,7 @@ spec:
      spec:
       containers:
             - name: c00
-              image: 738649861708.dkr.ecr.us-east-1.amazonaws.com/getkart/myrepo:1
+              image: 738649861708.dkr.ecr.us-east-1.amazonaws.com/getkart/myrepo:latest
               ports:
                - containerPort: 80
 
