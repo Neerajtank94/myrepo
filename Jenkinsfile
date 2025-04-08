@@ -29,9 +29,9 @@ pipeline {
         stage('Deploy to EKS') {
             steps {
                 script {
-                    sh "aws eks update-kubeconfig --region us-east-1 --name ${EKS_CLUSTER_NAME}"
-                    sh "kubectl apply -f k8s/deployment.yaml"
-                    sh "kubectl apply -f k8s/service.yaml"
+                    sh "aws eks update-kubeconfig --region us-east-1 --name myekscluster"
+                    sh "kubectl apply -f mydeploy.yaml"
+                    sh "kubectl apply -f service.yaml"
                 }
             }
         }
