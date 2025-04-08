@@ -20,7 +20,7 @@ pipeline {
         stage('Push Image to ECR') {
             steps {
                 script {
-                    sh "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 738649861708.dkr.ecr.us-east-1.amazonaws.com"
+                    
                     sh "docker push 738649861708.dkr.ecr.us-east-1.amazonaws.com/getkart/myrepo:${env.BUILD_ID}"
                 }
             }
