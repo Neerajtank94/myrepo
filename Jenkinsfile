@@ -30,8 +30,9 @@ pipeline {
             steps {
                 script {
                     
-                    sh "kubectl apply -f mydeploy.yaml"
-                    sh "kubectl apply -f service.yaml"
+                    sh 'envsubst < mydeploy.yaml | kubectl apply -f -'
+                   // sh "kubectl apply -f mydeploy.yaml"
+                   // sh "kubectl apply -f service.yaml"
                 }
             }
         }
