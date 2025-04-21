@@ -8,4 +8,4 @@ spec:
       targetPort: 80                     # Pods port
    selector:
      name: deployment                    # Apply this service to any pods which has the specific label
-   type: LoadBalancer                       # Specifies the service type i.e ClusterIP or NodePort
+   type: ClusterIP                       # Specifies the service type i.e ClusterIP or NodePort
