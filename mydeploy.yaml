@@ -18,3 +18,6 @@ spec:
               image: 738649861708.dkr.ecr.us-east-1.amazonaws.com/getkart/myrepo:$BUILD_ID
               ports:
                - containerPort: 80
+      imagePullSecrets:
+                 - name: regcred
+
