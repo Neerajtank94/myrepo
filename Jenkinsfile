@@ -31,8 +31,8 @@ pipeline {
                 script {
                     
                     sh 'envsubst < mydeploy.yaml | kubectl apply -f -'
-                   // sh "kubectl apply -f mydeploy.yaml"
-                   // sh "kubectl apply -f service.yaml"
+                     sh "kubectl apply -f service.yaml"
+                     sh "kubectl apply -f ingress_my.yaml"
                 }
             }
         }
